@@ -1,0 +1,37 @@
+/* color definitions, set theme here */
+:root {
+    --main-bg-color: rgb(249, 188, 43);
+    --main-bg-color-dark-1: #de9812;
+    --main-bg-color-dark-2: #bc7f0f;
+}
+
+body {
+    background-color: var(--main-bg-color);
+}
+
+#main-column {
+    width: 700px;
+}
+
+#media-player {
+    width: 600px;
+    height: 400px;
+    background-color: black;
+}
+
+#playlist-selection {
+    width: 650px;
+}
+
+.itemlist {
+    border: 1px solid var(--main-bg-color-dark-1);
+    border-radius: 15px;
+    background-color: var(--main-bg-color-dark-1);
+    height: 100px;
+    width: 650px;
+    overflow-y: scroll;
+}
+
+.selected {
+    background-color: var(--main-bg-color-dark-2);
+}

@@ -1,0 +1,12 @@
+[
+    {
+        "name": "Test 1",
+        "items": [
+            {
+                "name": "Test track",
+                "artists": ["Unknown"],
+                "file_url": "./media/Unknown - Test track.mp4"
+            }
+        ]
+    }
+]
