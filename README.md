@@ -10,3 +10,16 @@ Host playlists of music with simple yet sufficient control in the web.
 * The items for the playlist is intended to be music, however videos will be played as such in the player with default video control for the HTML player.
 * Supported file formats depend on your browser.
 * (For now) the songs need to be bare files hosted somewhere accessible. Integration with platforms such as YouTube, Spotify or SoundCloud may be a future feature, but this is outside the use case for v1.0.
+
+## Restricting access
+If the media files are hosted in a subdirectory of where the website is hosted, access to the media files and the jukebox can be managed with HTTP access restrictions.
+
+File `.htaccess`:
+```htaccess
+Options All -Indexes
+
+AuthUserFile /path/to/jukebox/.htpasswd
+AuthName "Jukebox"
+AuthType Basic
+require valid-user
+```

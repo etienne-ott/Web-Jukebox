@@ -1,2 +1,6 @@
 media/*
 playlists.json
+
+# server config
+.htaccess
+.htpasswd
