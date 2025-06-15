@@ -1,12 +1,24 @@
-/* color definitions, set theme here */
-:root {
+/* color definitions for themes */
+
+[data-theme="gold"] {
     --main-bg-color: rgb(249, 188, 43);
     --main-bg-color-dark-1: #de9812;
     --main-bg-color-dark-2: #bc7f0f;
+    --text-color: #000;
 }
+
+[data-theme="dark-purple"] {
+    --main-bg-color: rgb(10, 0, 36);
+    --main-bg-color-dark-1: #0c0048;
+    --main-bg-color-dark-2: #1b0079*;
+    --text-color: #fff;
+}
+
+/* specific rules */
 
 body {
     background-color: var(--main-bg-color);
+    color: var(--text-color);
 }
 
 #main-column {
@@ -21,6 +33,18 @@ body {
 
 #playlist-selection {
     width: 650px;
+}
+
+.selection {
+    background-color: var(--main-bg-color-dark-1);
+    color: var(--text-color);
+}
+
+#theme-selection {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 150px;
 }
 
 .itemlist {

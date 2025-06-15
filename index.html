@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="dark-purple">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -12,11 +12,18 @@
   </head>
 
   <body>
+    <div id="header">
+      <select id="theme-selection" class="selection">
+        <option value="gold">Gold</option>
+        <option value="dark-purple">Dark Purple</option>
+      </select>
+    </div>
+
     <div id="main-column" class="container">
       <div id="playlist-box" class="container">
         <span>Playlists</span>
         <br>
-        <select id="playlist-selection"></select>
+        <select id="playlist-selection" class="selection"></select>
         <br>
         <div class="itemlist">
           <ol id="playlist-itemlist"></ol>

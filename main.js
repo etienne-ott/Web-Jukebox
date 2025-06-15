@@ -6,6 +6,11 @@ function by_class(tag) {
     return document.getElementsByClassName(tag)
 }
 
+function setTheme(theme) {
+    document.documentElement.setAttribute('data-theme', theme);
+    localStorage.setItem('theme', theme);
+}
+
 var Playback = function() {
     this.player = by_id("media-player")
     this.player.autoplay = true
@@ -66,6 +71,18 @@ Playback.prototype.select_item = function(item_nr) {
 var current_playback = new Playback()
 
 async function main() {
+    // set theme from local storage
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme) {
+        document.documentElement.setAttribute('data-theme', savedTheme);
+    }
+
+    // register theme selection
+    by_id("theme-selection").onchange = function(e) {
+        setTheme(by_id("theme-selection").value)
+    }
+
+    // load playlists, this might take a second for large playlists
     await current_playback.load_playlists("./playlists.json")
 
     by_id("playlist-selection").onchange = function(e) {
