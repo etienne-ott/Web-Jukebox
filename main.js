@@ -85,10 +85,15 @@ async function main() {
     // load playlists, this might take a second for large playlists
     await current_playback.load_playlists("./playlists.json")
 
+    // register playlist selection
     by_id("playlist-selection").onchange = function(e) {
         current_playback.select_playlist(parseInt(this.selectedIndex), 0)
     }
 
+    // select first playlist, first track. this has the function of filling the playlist element
+    // with tracks so it's easier to understand what the element is for and it also fixes a bug when
+    // only playlist exists, because selecting that playlist is not registered as change and thus
+    // will not load the playlist
     current_playback.select_playlist(0, 0)
 }
 
