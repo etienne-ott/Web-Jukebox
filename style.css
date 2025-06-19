@@ -59,3 +59,7 @@ body {
 .selected {
     background-color: var(--main-bg-color-dark-2);
 }
+
+.playlist-item {
+    cursor: pointer;
+}

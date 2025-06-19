@@ -50,6 +50,14 @@ Playback.prototype.select_playlist = function(playlist_nr, item_nr) {
     })
     by_id("playlist-itemlist").innerHTML = itemsHTML
 
+    // register track selection
+    const items = by_class("playlist-item")
+    for (let i=0; i < items.length; i++) {
+        items[i].onclick = function(e) {
+            current_playback.select_item(parseInt(this.dataset.idx))
+        }
+    }
+
     this.select_item(item_nr)
 }
 
